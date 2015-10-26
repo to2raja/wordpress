@@ -1,0 +1,733 @@
+body {
+	font-family: "Frutiger W02", Arial, sans-serif;
+	max-width: 1200px;
+	margin: 0 auto;
+
+	#topbar {
+		//background: none repeat scroll 0 0 #007CC2;
+	    background-color: #007CC2;
+	    color: #FFFFFF;
+	    display: block;
+	    padding: 0.4375em 2em;
+	    height: 26px;
+	    text-align: right;
+	    overflow: hidden;
+	    font-weight: 200;
+
+	    .contact {
+	    	font-size: 0.75em;
+    		margin: 0.5em 0 0 0;
+    		display: inline-block;
+    		float: left;
+    		text-transform: uppercase;
+    		height: 15px;
+
+    		a {
+    			font-weight: 700;
+
+	    		
+	    		
+    			&:hover {
+    				color: #7dbce0;
+    			}
+
+    		}
+
+    		.or {
+    			margin: 0 0.5em;
+    		}
+
+    		.tel {
+    			white-space: nowrap;
+    		}
+	    }
+
+	    .social {
+	    	border-left: 1px solid #7FBDE0;
+		    margin: 0.0625em 0 0 1em;
+		    padding: 0 0 0 1em;
+		    vertical-align: middle;
+		    display: inline-block;
+    		float: left;
+    		height: 100%;
+
+    		li {
+    			background-repeat: no-repeat;
+			    background-size: contain;
+			    display: inline-block;
+			    height: 20px;
+			    margin: 0 4px;
+			    width: 20px;
+
+			    a {
+			    	background-image: url("images/public-sprites-new.png");
+    				background-repeat: no-repeat;
+    				display: block;
+				    height: 100%;
+				    width: 100%;
+				    color: #FFFFFF;
+				    overflow: hidden;
+				    text-indent: 100%;
+				    white-space: nowrap;
+			    }
+
+			    &.googleplus a {
+			    	background-position: -80px 0;
+
+			    	&:hover {
+						background-position: -100px 0;			    		
+			    	}
+			    }
+			    &.facebook a {
+			    	background-position: -40px 0;
+
+			    	&:hover {
+						background-position: -20px 0;			    		
+			    	}
+			    }
+			    &.twitter a {
+			    	background-position: -60px 0;
+
+			    	&:hover {
+						background-position: 0 0;			    		
+			    	}
+			    }
+    		}
+	    }
+
+	    a {
+	    	color: #FFFFFF;
+	    }
+	}
+
+	header {
+		display: block;
+		overflow: hidden;
+		position: relative;
+
+		#brand {
+			//background-image: url("images/public-sprites-new.png");
+			background-repeat: no-repeat;
+			//background-position: 0 -854px;
+			background-image: url("images/logoMetLifeDefender.png");
+			background-color: rgba(0,0,0,0);
+		    float: left;
+		    height: 98px;
+		    width: 263px;
+		    font-size: 2em;
+		    margin: 0.5em;
+    		position: relative;
+    		z-index: 20;
+
+    		a {
+    			display: block;
+			    height: 100%;
+			    width: 100%;
+			    overflow: hidden;
+			    text-indent: 100%;
+			    white-space: nowrap;
+    		}
+		}
+		nav#mainmenu {
+			top: 2.5em;
+			position: absolute;
+		    top: 0;
+		    width: 100%;
+		    z-index: 10;
+		    display: block;
+
+		    /*
+		    .toggle-menu {
+		    	display: none;
+		    }
+		    */
+		    .tablet-mobile-menu-bar {
+		    	display: none;
+		    }
+
+		    ul {
+		    	background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+			    border-bottom: 0 none;
+			    padding: 4em 0 0;
+			    text-align: right;
+			    clear: both;
+    			z-index: 30;
+    			list-style-type: none;
+    			margin: 0;
+
+    			li {
+    				border: 0 none;
+				    display: inline-block;
+				    margin: 0 1em 1em 0;
+				    vertical-align: middle;
+				    width: 8em;
+
+				    &:first-child {
+	    				border-top: 0 none;
+	    			}
+
+	    			&.current {
+	    				position: relative;
+
+	    				a {
+	    					color: #007CC2;
+
+	    					&:hover {
+	    						color: #008cdc;
+	    					}
+
+		    				&:after {
+		    					background-image: url("images/public-sprites-new.png");
+	    						background-repeat: no-repeat;
+	    						background-position: 0 -379px;
+							    content: "";
+							    display: block;
+							    height: 8px;
+							    left: 4em;
+							    margin: 0.5em auto 0 0;
+							    position: absolute;
+							    width: 12px;
+		    				}
+	    				}
+	    			}
+
+	    			&.secure {
+	    				display: none;
+	    				visibility: hidden;
+	    			}
+	    			&.action {
+	    				margin: -1em 1em 0 2em;
+    					width: auto;
+
+    					a {
+    						background: none repeat scroll 0 0 #F37321;
+						    border-bottom: 0.25em solid #D55A0C;
+						    border-radius: 0.5em;
+						    color: #FFFFFF;
+						    padding: 1em 1em 0.75em;
+						    width: auto;
+
+						    &:hover {
+						    	background: #f48239;
+						    	color: #FFFFFF;
+						    }
+    					}
+	    			}
+	    			&.util {
+	    				display: none;
+    					visibility: hidden;
+	    			}
+
+	    			a {
+    					color: #BDC3C7;
+					    font-weight: 700;
+					    min-height: 0;
+					    padding: 0;
+					    text-align: center;
+					    text-transform: uppercase;
+					    display: block;
+					    font-size: 14px;
+					    text-decoration: none;
+
+					    
+					    &:hover {
+					    	background: transparent;
+							color: #cbd0d3;
+							
+					    }
+	    			}
+    			}
+
+    			
+
+		    }
+		}
+
+		nav.submenu {
+			display: block;
+			-webkit-touch-callout: none;
+			-webkit-user-select: none;
+			-khtml-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+
+			.toggle-submenu {
+				display: none;
+			}
+
+			ul {
+				background-color: #D3E6F5;
+				clear: both;
+			    font-size: 0.8em;
+			    margin: 1em 0 0;
+			    text-align: center;
+			    list-style-type: none;
+    			padding: 0;
+
+				li {
+					display: inline-block;
+    				padding: 0.4em 1em;
+
+					&.current {
+						background-color: #92C2E8;
+
+						a {
+							color: #1D538F;
+						}
+					}
+
+					a {
+						font-weight: 700;
+						color: #000000;
+						text-decoration: none;
+					}
+				}
+			}
+
+		}
+
+	}
+
+}
+
+@media screen and (max-width: 1199px) {
+	body {
+
+
+		&.home {
+			header {
+				nav.submenu {
+					display: none;
+				}
+			}
+		}
+
+		#topbar {
+			display: none;
+		}
+		header {
+			overflow: visible;
+			padding: 68px 0 0 0;
+			margin: 0 0 16px 0;
+			
+
+			#brand {
+				float: none;
+				//margin: 16px 16px 0 16px;
+				margin: 16px;
+			}
+	
+			nav#mainmenu {
+				/*top: 4.75em;*/
+				//top:3.75em;
+				top: 0;
+				z-index: 40;
+
+
+				/*
+				.toggle-menu {
+					display: block;
+					background-image: url("images/public-sprites.png");
+					background-repeat: no-repeat;
+					background-position: -486px -379px;
+					cursor: pointer;
+				    display: block;
+				    float: right;
+				    height: 40px;
+				    margin: 0;
+				    width: 40px;
+				    overflow: hidden;
+				    text-indent: 100%;
+				    white-space: nowrap;
+
+				    &.toggle-closed {
+				    	background-position: -14px -430px;
+				    }
+				}
+				*/
+				.tablet-mobile-menu-bar {
+					display: block;
+					overflow: hidden;
+					
+					.toggle-menu {
+						float: right;
+						border-left: 3px solid #FFFFFF;
+						background-color: #017dc2;
+						height: 68px;
+						width: 68px;
+						cursor: pointer;
+						-webkit-touch-callout: none;
+						-webkit-user-select: none;
+						-khtml-user-select: none;
+						-moz-user-select: none;
+						-ms-user-select: none;
+						user-select: none;
+						background-image: url("images/toggle-menu-button-tablet.png");
+						background-repeat: no-repeat;
+						background-position: center 37px;
+
+						span {
+							display: block;
+							padding: 12px 0 0 0;
+
+							text-align: center;
+							font-size: 14px;
+							font-weight: 700;
+							line-height: 17px;
+							color: #FFFFFF;
+
+						}
+					}
+
+					.contact {
+				    	font-size: 14px;
+			    		margin: 0;
+			    		display: block;
+			    		overflow: hidden;
+			    		text-transform: uppercase;
+			    		height: 15px;
+			    		padding: 22px 54px 22px 20px;
+			    		height: 24px;
+			    		background-color: #017dc2;
+			    		color: #FFFFFF;
+			    		text-align: left;
+			    		line-height: 25px;
+
+			    		a {
+			    			font-weight: 700;
+			    			color: #FFFFFF;
+
+				    		
+				    		
+			    			&:hover {
+			    				color: #7dbce0;
+			    				
+			    			}
+
+			    		}
+
+			    		.or {
+			    			margin: 0 0.5em;
+			    		}
+
+			    		.tel {
+			    			white-space: nowrap;
+			    		}
+				    }
+				}
+
+				ul {
+					background: none repeat scroll 0 0 #007CC2;
+				    border-bottom: 1px solid #008CDC;
+				    clear: both;
+				    z-index: 30;
+				    display: block;
+				    //margin: 0;
+				    margin: 2px 0 0 0;
+				    padding: 0;
+
+				    &.mainmenu-closed {
+				    	display: none;
+				    }
+
+					li {
+						border-top: 1px solid #008CDC;
+						margin: 0;
+						display: block;
+						width: 100%;
+						text-align: left;
+
+						&.current {
+						   	 position: relative;
+
+						   	 a {
+						   	 	color: #FFFFFF;
+
+							   	 &:hover {
+							   	 	color: #FFFFFF;
+							   	 }
+
+						   	 &:after {
+						   	 background-image: none;
+						   content: none;
+						   display: none;
+						   	 }
+						   	 }
+						   	 }
+						&.secure {
+							display: block;
+							visibility: visible;
+
+							a {
+								text-transform: uppercase;
+
+								&:before {
+									background-position: -296px -379px;
+									
+								}
+								&:hover {
+									&:before {
+										background-position: -391px -379px;
+									}
+								}
+							}
+						}
+
+						&.action {
+							margin: 0;
+							
+							a {
+								background-color: #F37321;
+								border: none;
+								border-radius: 0;
+								text-transform: uppercase;
+								padding: 20px 13px 17px 65px;
+
+								&:hover {
+									background-color: #F48239;
+								}
+
+								&:before {
+									content: "";
+								    display: none;
+								    visibility: hidden;
+								}
+							}
+						}
+
+						&.util {
+							display: block;
+							visibility: visible;
+
+							a {
+								text-transform: uppercase;
+								/*padding: 20px 13px 17px 50px;*/
+
+								&:before {
+									content: "";
+								    /*display: none;*/
+								    /*visibility: hidden;*/
+								}	
+							}
+						}
+
+						&:first-child {
+							border-top: 0 none;
+						}
+
+						a {
+							color: #FFFFFF;
+						    display: block;
+						    font-size: 18px;
+						    //min-height: 39px;
+						    padding: 20px 13px 17px 65px;
+						    text-decoration: none;
+						    margin: 0;
+						    text-transform: uppercase;
+						    text-align: left;
+
+							&:before {
+								/*
+								border-bottom: 1px solid #008CDC;
+							    border-right: 1px solid #008CDC;
+							    */
+							    content: " ";
+							    display: block;
+							    float: left;
+							    height: 40px;
+							    margin: -20px 0 4px -50px;
+							    width: 40px;
+							    background-image: url("images/public-sprites.png");
+								background-repeat: no-repeat;
+								/*background-position: -201px -376px;*/
+							}
+
+							&:hover {
+						    	background-color: #23435a;
+						    	color: #FFFFFF;
+
+						    	&:before {
+						    		background-position: -306px 3px;
+						    	}
+						    }
+						}
+					}
+				}
+			}
+			nav.submenu {
+				position: relative;
+
+				.toggle-submenu { display: block; background-color: #d2e6f6; height: 46px; padding: 0 0 0 22px; color: #017dc2; font-size: 17px; font-weight: 700; line-height: 46px; position: relative; cursor: pointer;
+
+					&:after { display: block; content: ""; width: 19px;
+						height: 10px;
+						background-image: url('images/toggle-submenu-up-arrow.png');
+						background-repeat: no-repeat;
+						background-position: center center;
+						position: absolute;
+						right: 13px;
+						top: 18px;
+					}
+
+					&.toggle-closed {
+						
+						&:after {
+							background-image: url('images/toggle-submenu-down-arrow.png');
+						}
+					}
+
+				}
+
+				ul {
+					position: absolute;
+					display: block;
+					margin: 0;
+					background-color: #f0f7fb;
+					-webkit-box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.37);
+					-moz-box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.37);
+					box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.37);
+					width: 100%;
+					z-index: 20;
+
+					&.submenu-closed {
+						display: none;
+					}
+
+					li {
+						float: none;
+						display: block;
+						margin: 0 22px;
+						padding: 0;
+						border-top: 1px solid #d7e9f7;
+						text-align: left;
+
+						&:first-child {
+							border-top: none;
+						}
+
+						&.current {
+							background-color: #f0f7fb;
+
+							a {
+								color: #000000;
+							}
+						}
+
+						a {
+							color: #000000;
+							font-size: 15px;
+							font-weight: 700;
+							padding: 17px 0;
+							display: block;
+						}
+					}
+				}
+
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 640px) {
+	body {
+		header {
+			//height: 55px;
+			padding: 0;
+
+			#brand {
+				//background-position: -84px -493px;
+				//background-position: 0 0;
+				background-position: center center;
+				background-image: url('images/metlife_defender_logo_mobile.png');
+				//background-image: url('images/metlife_defender_logo_mobile@2x.png');
+				background-size: 100px 45px;
+				width: 100px;
+				height: 45px;
+			    //margin: 0.5em;
+			    //margin: 9px 16px;
+			    position: relative;
+			    z-index: 50;
+			    margin: 0;
+			    padding: 5px 16px;
+			}
+
+			nav#mainmenu {
+				top: 0;
+
+				.tablet-mobile-menu-bar {
+					
+					.toggle-menu {
+						height: 55px;
+						width: 55px;
+						background-image: url("images/toggle-menu-button-mobile.png");
+						background-position: center 28px;
+
+						span {
+							font-size: 12px;
+							line-height: normal;
+							padding: 8px 0 0 0;
+						}
+					}
+
+
+					.contact {
+				    	display: none;
+				    }
+				}
+			}
+
+			nav.submenu {
+				margin-top: 2px;
+			}
+		}
+	}
+}
+
+@media 
+only screen and (max-width: 640px) and (-webkit-min-device-pixel-ratio: 2),
+only screen and (max-width: 640px) and (   min--moz-device-pixel-ratio: 2),
+only screen and (max-width: 640px) and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (max-width: 640px) and (        min-device-pixel-ratio: 2),
+only screen and (max-width: 640px) and (                min-resolution: 192dpi),
+only screen and (max-width: 640px) and (                min-resolution: 2dppx) {
+	body {
+		header {
+
+			#brand {
+				background-image: url('images/metlife_defender_logo_mobile@2x.png');
+			}
+
+
+		}
+	
+	}
+}
+
+@media screen and (min-width: 641px) and (max-width: 1198px) {
+	 nav#mainmenu ul { width: 50%; float: right; }
+}
+@media screen and (max-width: 1199px) {
+	.dt-show { display:none; }
+}
+
+
+body header nav#mainmenu ul li a:before,
+body header nav#mainmenu ul li a:hover:before { background-image: url("images/nav-arrow.png"); background-position: 7px 21px; height: 59px; margin-left: -50px; width: 37px; }
+
+body header nav#mainmenu ul li a:before { border-right: 1px solid #008CDC; }
+body header nav#mainmenu ul li a:hover:before { border-right: 1px solid #426d85; }
+
+body header nav#mainmenu ul li.secure a:before,
+body header nav#mainmenu ul li.secure a:hover:before { background-image: url("images/nav-secure.png"); background-position: 6px 21px; }
+body header nav#mainmenu ul li.util a:before,
+body header nav#mainmenu ul li.util a:hover:before { background-image: url("images/nav-contact.png"); background-position: 2px 21px; margin-bottom: 0;}
+body header nav#mainmenu .tablet-mobile-menu-bar .toggle-menu span { text-transform: uppercase; }
+body header nav#mainmenu .tablet-mobile-menu-bar .contact { text-align: left; }
+#topbar .login:before { background-position: -141px 0; content: ""; display: inline-block; height: 24px; margin-right: 0.5em; vertical-align: middle; width: 21px; }
+#topbar .login { display: inline-block; font-size: 0.75em; text-decoration: underline; text-transform: uppercase; }
+#topbar .login:hover { color: #7dbce0; }
+#topbar .login:before, 
+#topbar .login:hover:before { background-image: url("images/public-sprites-new.png"); background-repeat: no-repeat; }
+#topbar .login:hover:before { background-position: -120px 0; }
+.contact-header-df:before { background-image: url("images/public-sprites-new.png"); background-position: -45px -379px; background-repeat: no-repeat; content: ""; display: inline-block; height: 16px; margin: -0.1em 0.5em 0; vertical-align: middle; width: 19px; }

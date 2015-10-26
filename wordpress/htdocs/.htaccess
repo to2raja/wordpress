@@ -1,0 +1,54 @@
+#SetEnvIf X-Forwarded-Proto https HTTPS=on
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+RewriteCond %{REQUEST_METHOD} ^(TRACE|TRACK)
+RewriteRule .* - [F]
+
+#RewriteCond %{HTTPS} !=on
+#RewriteCond %{HTTP:X-Forwarded-Proto} !=https
+#RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+#stop autor enumeration	attack
+RewriteCond %{REQUEST_URI} ^/$
+RewriteCond %{QUERY_STRING} ^/?author=([0-9]*)
+RewriteRule ^(.*)$ $1?author=99999 [L]
+
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+
+</IfModule>
+
+#temporarily allowing access so that clients can view the site.
+# Block Access to wp-login
+<Files "wp-login.php">
+order allow,deny
+allow from all
+</Files>
+
+#temporarily allowing access so that clients can view the site.
+## Allow Access to ajax
+<Files "admin-ajax.php">
+Order allow,deny
+Allow from all
+Satisfy any
+</Files>
+
+
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+
+# END WordPress
+
+ErrorDocument 503 " "

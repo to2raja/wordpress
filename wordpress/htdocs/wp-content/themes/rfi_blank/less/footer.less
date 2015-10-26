@@ -1,0 +1,250 @@
+body {
+	font-family: "Frutiger W02", Arial, sans-serif;
+	max-width: 1200px;
+	margin: 0 auto;
+
+	footer {
+		border-collapse: separate;
+    	border-spacing: 1em;
+    	display: table;
+    	background: none repeat scroll 0 0 #007CC2;
+	    clear: both;
+	    color: #FFFFFF;
+	    font-family: 'Arial',sans-serif;
+	    font-size: 0.58333em;
+	    margin: 1em 0 0;
+	    padding: 0 1em 1em;
+	    text-align: left;
+
+	    ul {
+	    	list-style-type: none;
+		    margin: 0;
+		    padding: 0;
+
+		    li {
+
+		    	&.segment {
+		    		display: table-cell;
+   		 			vertical-align: middle;
+		    	}
+
+		    	&.brand {
+		    		height: 37px;
+    				width: 180px;
+
+    				h3 {
+    					background-image: url("images/public-sprites.png");
+    					background-repeat: no-repeat;
+    					background-position: -86px -590px;
+    					background-color: transparent;
+					    content: "";
+					    display: block;
+					    height: 37px;
+					    width: 158px;
+					    overflow: hidden;
+					    text-indent: 100%;
+					    white-space: nowrap;
+    				}
+		    	}
+		    	&.main {
+		    		p {
+		    			margin: 0;
+		    		}
+		    		ul.policy-links {
+		    			margin: 0;
+		    			list-style-type: none;
+		    			padding: 0;
+
+		    			li {
+		    				border-left: 1px solid #9CCAE9;
+						    display: inline;
+						    padding: 0 0.5em;
+						    margin: 0;
+
+		    				&:first-child {
+		    					border-left: 0 none;
+    							padding-left: 0;
+		    				}
+		    			}
+		    		}
+		    	}
+		    	&.contact {
+		    		width: 250px;
+		    		clear: both;
+		    		text-transform: uppercase;
+
+		    		p {
+		    			border-left: 1px solid #9CCAE9;
+					    border-right: 1px solid #9CCAE9;
+					    padding: 0 1em;
+
+					    a {
+					    	white-space: nowrap;
+					    	text-decoration: underline;
+
+					    	&:before {
+					    		
+					    	}
+
+					    	&:hover {
+					    		color: #c2e9ff;
+
+					    		&:before {
+					    			background-position: -64px -379px;
+					    		}
+					    	}
+					    }
+
+					    .tel {
+					    	white-space: nowrap;
+
+					    	a {
+					    		&:before {
+					    			display: none;
+					    		}
+					    	}
+					    }
+		    		}
+		    	}
+		    	&.social {
+		    		width: 152px;
+
+		    		ul {
+		    			padding-top: 0.5em;
+		    			list-style-type: none;
+
+		    			li {
+		    				background-repeat: no-repeat;
+						    background-size: contain;
+						    display: inline-block;
+						    height: 20px;
+						    margin: 0 4px;
+						    width: 20px;
+
+						    &.googleplus a {
+						    	background-position: -80px 0;
+
+						    	&:hover {
+						    		background-position: -100px 0;
+						    	}
+						    }
+						    &.facebook a {
+						    	background-position: -40px 0;
+
+						    	&:hover {
+						    		background-position: -20px 0;
+						    	}
+						    }
+						    &.twitter a {
+						    	background-position: -60px 0;
+
+						    	&:hover {
+						    		background-position: 0 0;
+						    	}
+						    }
+
+						    a {
+						    	background-image: url("images/public-sprites.png");
+					    		background-repeat: no-repeat;
+					    		overflow: hidden;
+								text-indent: 100%;
+								white-space: nowrap;
+								display: block;
+							    height: 100%;
+							    width: 100%;
+						    }
+		    			}
+		    		}
+		    	}
+		    }
+	    }
+
+	    a {
+			color: #FFFFFF;
+		    font-weight: 400;
+		    text-decoration: underline;
+	    }
+	}
+}
+
+//@media (max-width: 640px) {
+@media screen and (max-width: 768px) {
+
+	body {
+		
+		footer {
+			padding: 1em;
+			border-spacing: 0;
+
+
+			ul { 
+				padding: 54px 0 4px 0;
+				position: relative;
+
+				li {
+
+					&.segment {
+						display: block;	
+					}
+					
+					&.brand {
+						height: auto;
+						width: auto;
+						top: 0;
+						left: 0;
+						position: absolute;
+
+						h3 {
+							background-position: 0 -590px;
+							height: 20px;
+							width: 86px;
+							margin: 3px 0 10px;
+						}
+					}
+
+					&.social {
+						position: absolute;
+						top: 0;
+						right: 0;
+						width: auto;
+					}
+
+					&.contact {
+						top: 36px;
+						position: absolute;
+						width: auto;
+
+						p {
+							border: none;
+							padding: 0;
+							margin: 0;
+						}
+					}
+
+					&.main {
+
+						p {
+							margin: 9px 0;
+						}
+
+						ul.policy-links {
+
+							li {
+								display: block;
+								border: none;
+								padding: 0;
+								margin: 9px 0;
+							}
+						}
+					}
+				}
+			}
+
+		}
+
+	}
+
+}
+
+
+
